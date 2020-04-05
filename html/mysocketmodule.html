@@ -1,0 +1,2200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.7.5" />
+<title>mysocketmodule API documentation</title>
+<meta name="description" content="1. **SERVEUR** - jump to section in [[mysocketmodule.py#SERVER]] …" />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<style>.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{font-weight:bold}#index h4 + ul{margin-bottom:.6em}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>mysocketmodule</code></h1>
+</header>
+<section id="section-intro">
+<ol>
+<li>
+<p><strong>SERVEUR</strong> - jump to section in [[mysocketmodule.py#SERVER]]</p>
+</li>
+<li>
+<p><strong>CLIENT</strong> - jump to section in [[mysocketmodule.py#CLIENT]]</p>
+</li>
+</ol>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">&#34;&#34;&#34;
+1. **SERVEUR** - jump to section in [[mysocketmodule.py#SERVER]]
+
+2. **CLIENT** - jump to section in [[mysocketmodule.py#CLIENT]]
+
+&#34;&#34;&#34;
+
+import socket
+
+# == SERVER ==
+class Server:
+
+    # == __init__ ==
+    def __init__(self,port):
+        &#34;&#34;&#34;
+        Initialise le socket serveur &#39;self.mySocket&#39;
+        Initialise la liste vide &#39;self.clientlist&#39;
+        Initialise le booléen &#39;self.ouvert&#39; à False
+        Initialise l&#39;entier &#39;self.nextnumber&#39; à 0
+        &#34;&#34;&#34;
+        self.mySocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.mySocket.bind((&#39;&#39;,port)) # &#39;&#39; signifie qu&#39;il acceptera les requêtes peu importe l&#39;interface (localhost, 192.0. ...)
+
+        self.clientlist = [] # liste des clients, où l&#39;indice i est [client,addr,self]
+
+        self.ouvert = False
+
+        self.nextnumber = 0
+
+    # == __repr__ ==
+    def __repr__(self):
+        &#34;&#34;&#34;
+        Renvoie un string de la forme :
+        [0] ip:port
+        [1] ip:port
+        ...
+
+        &#34;&#34;&#34;
+
+        output = &#34;&#34;
+
+        for liste in self.clientlist:
+            client,addr,n = liste
+            ip,port = addr
+
+
+            output += &#34;[%s] &#34;%n + str(ip) + &#34;:&#34; + str(port) + &#34;\n&#34;
+
+        return(output)
+
+    # == listen ==
+    def listen(self,timeout):
+        &#34;&#34;&#34;
+        Le socket s&#39;ouvre pour recevoir des connexions extérieurs, cela va FREEZE le déroulement des opérations jusqu&#39;à obtiention d&#39;un signal
+
+        :timeout = float (temps d&#39;attente en seconde avant expiration)
+        &#34;&#34;&#34;
+
+        try:
+            self.mySocket.settimeout(timeout)
+            self.mySocket.listen(10)
+            client, addr = self.mySocket.accept() # conn_avec_client est un socket
+            self.clientlist.append([client,addr,self.nextnumber])
+
+            print (&#34;[PRINT] Connexion de : &#34;,addr,self.nextnumber)
+            self.send_to(self.nextnumber,&#34;SERVER&amp;&amp;NUMBER&amp;&amp;%s&amp;&amp;end|&#34;%self.nextnumber)
+            self.send_everyone_except(self.nextnumber,&#34;SERVER&amp;&amp;PRINT&amp;&amp;Connexion du client n°%s&#34;%self.nextnumber)
+
+            self.ouvert = True
+
+            self.nextnumber += 1
+
+        except:
+            print(&#34;Client introuvable (%s s timeout)&#34;%timeout)
+
+    # == send_all ==
+    def send_all(self,message):
+        &#34;&#34;&#34;
+        Envoie un message à tous les clients
+
+        exemple : je veux print partout &#34;message_content&#34; --&gt; server.send(numberfrom+&#34;&amp;&amp;&#34;+pattern+&#34;&amp;&amp;&#34;+message_content)
+        numberfrom est un string qui identifie l&#39;envoyeur (peut être &#34;abc123&#34; par exemple)
+        pattern est un string, motif à utiliser
+        message_content est un string, argument du motif
+
+        WARNING : si le symbole &#39;&amp;&#39; est utilisé pour autre chose, il y a des risques d&#39;erreur de syntaxe
+        :message : string [format du message : numberfrom&amp;&amp;pattern&amp;&amp;message_content]
+        &#34;&#34;&#34;
+
+        message = message.replace(&#34;&amp;&amp;end|&#34;,&#34;&#34;)
+
+        if message == &#34;&#34;:
+            pass
+        elif &#34;|&#34; in message:
+            print(&#34;[PRINT] Erreur : il ne doit pas y avoir &#39;|&#39; dans votre message&#34;)
+        else:
+            for client,addr,number in self.clientlist:
+                try:
+                    client.send((message+&#34;&amp;&amp;end|&#34;).encode())
+                except:
+                    print(&#34;[PRINT] Erreur d&#39;envoie avec&#34;,addr,number)
+
+    # == send_everyone_except ==
+    def send_everyone_except(self,number,message):
+        &#34;&#34;&#34;
+        Envoie un message à tous les clients, excepté le n°(number)
+
+        exemple : je veux print partout &#34;message_content&#34; --&gt; server.send_everyone_except(numberfrom+&#34;&amp;&amp;&#34;+pattern+&#34;&amp;&amp;&#34;+message_content)
+        numberfrom est un string qui identifie l&#39;envoyeur (peut être &#34;abc123&#34; par exemple)
+        pattern est un string, motif à utiliser
+        message_content est un string, argument du motif
+
+
+        WARNING : si le symbole &#39;&amp;&#39; est utilisé pour autre chose, il y a des risques d&#39;erreur de syntaxe
+        :number : int (numéro du client à ne pas envoyer le message)
+        :message : string [format du message : numberfrom&amp;&amp;pattern&amp;&amp;message_content]
+        &#34;&#34;&#34;
+        message = message.replace(&#34;&amp;&amp;end|&#34;,&#34;&#34;)
+
+        if message == &#34;&#34;:
+            pass
+
+        elif &#34;|&#34; in message:
+            print(&#34;[PRINT] Erreur : il ne doit pas y avoir &#39;|&#39; dans votre message&#34;)
+
+        else:
+            for client,addr,n in self.clientlist:
+                if n!=number:
+                    try:
+                        client.send((message+&#34;&amp;&amp;end|&#34;).encode())
+                    except:
+                        print(&#34;[PRINT] Erreur d&#39;envoie avec&#34;,addr,n)
+
+    # == send_to ==
+    def send_to(self,number,message):
+        &#34;&#34;&#34;
+        Envoie un message à un client en particulier
+
+        exemple : je veux print partout &#34;message_content&#34; --&gt; server.send_to(number,numberfrom+&#34;&amp;&amp;&#34;+pattern+&#34;&amp;&amp;&#34;+message_content)
+        numberfrom est un string qui identifie l&#39;envoyeur (peut être &#34;abc123&#34; par exemple)
+        pattern est un string, motif à utiliser
+        message_content est un string, argument du motif
+
+        WARNING : si le symbole &#39;&amp;&#39; est utilisé pour autre chose, il y a des risques d&#39;erreur de syntaxe
+        :number : int (numéro du client auquel on envoie le message)
+        :message : string (contenu du message à envoyer)
+        &#34;&#34;&#34;
+        message = message.replace(&#34;&amp;&amp;end|&#34;,&#34;&#34;)
+
+        if message == &#34;&#34;:
+            pass
+        elif &#34;|&#34; in message:
+            print(&#34;[PRINT] Erreur : il ne doit pas y avoir &#39;|&#39; dans votre message&#34;)
+        else:
+            client,addr,n = self.clientlist[number]
+            try:
+                client.send((message+&#34;&amp;&amp;end|&#34;).encode())
+            except:
+                print(&#34;[PRINT] Erreur d&#39;envoie avec&#34;,addr,n)
+
+    # == receive ==
+    def receive(self):
+        &#34;&#34;&#34;
+        Tente de recevoir un message, d&#39;un ou plusieurs clients
+        message = string [format : numberfrom&amp;&amp;pattern&amp;&amp;message_content]
+
+        return: liste_de_liste_data dont l&#39;indice i représente la liste d&#39;informations reçus par le client n°i (potentiellement [])
+        &#34;&#34;&#34;
+        liste_de_liste_data = []
+
+        for client,addr,n in self.clientlist :
+            try:
+                client.settimeout(0.1)
+                message=client.recv(4096).decode()
+            except:
+                message=&#34;&#34;
+            liste_de_liste_data.append( self.treat_received_message(n,message) )
+
+        return(liste_de_liste_data)
+
+    def treat_received_message(self,number,message):
+        &#34;&#34;&#34;
+        Traite les messages reçus
+        Déroulement :
+        1) Détecte si plusieurs messages ont été reçus en même temps (un client a envoyé plusieurs msg d&#39;un coup par exemple) avec la méthode check_for_multiple_messages
+        2) Traite chacun de ces messages individuellement avec la méthode check_for_multiple_messages
+        3)  Message vide : Renvoie une liste vide
+            Message non vide : Les motifs &#34;TREATDATA&#34; seront ajoutés à une liste dans un tupple (pattern,message_content)
+                               Les autres motifs seront traités par la fonction pattern_recognition()
+
+        Les motifs sont entièrement modifiables !
+
+
+        :number = int
+        :message = string [format : numberfrom&amp;&amp;pattern&amp;&amp;message_content]
+        &#34;&#34;&#34;
+
+        if message == &#34;&#34;:
+            return([])
+        else:
+            return(self.check_for_multiple_messages(number,message))
+
+    def check_for_multiple_messages(self,number,message):
+        &#34;&#34;&#34;
+        Détecte si un ou plusieurs messages ont été envoyés, puis les envoie vers pattern_recognition
+
+        message_content ne doit pas contenir le string &#39;|&#39;
+
+        :number = int
+        :message = string [format : numberfrom&amp;&amp;pattern&amp;&amp;message_content]
+        return: liste_data de doublons (p,m) créés par pattern_recognition
+        &#34;&#34;&#34;
+
+        # pme pour &#34;pattern message end&#34;
+        # Le message sera composé de la forme p1&amp;&amp;m1&amp;&amp;e|p2&amp;&amp;m2&amp;&amp;e|p3....
+        # &#34;a&amp;&amp;b&amp;&amp;c.split(&#34;&amp;&amp;&#34;) -&gt; [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;]
+
+        liste_triplestring = message.split(&#39;|&#39;)
+        del liste_triplestring[-1]
+        liste_data = []
+
+        for triplestring in liste_triplestring:
+
+            if triplestring.count(&#39;|&#39;)&gt;1 :
+                print(&#34;[BUG] Le message reçu contient plusieurs occurences de &#39;|&#39;&#34;)
+
+            infolist = triplestring.split(&#39;&amp;&amp;&#39;)
+
+            numberfrom = infolist[0]
+
+            pattern = infolist[1] # pattern
+
+            message_content = &#34;&amp;&amp;&#34;.join(infolist[2:-1]) # le contenu du message sera compris entre le premier &#39;&amp;&amp;&#39; et le dernier &#39;&amp;&amp;&#39;
+
+            p,m = self.pattern_recognition(number,pattern,message_content)
+
+            if (p,m)!=(&#34;&#34;,&#34;&#34;):
+                liste_data.append( (p,m) )
+
+        return(liste_data)
+
+
+    def check_for_one_message(self,number,message):
+        &#34;&#34;&#34;
+        Version de &#39;check_for_multiple_messages&#39; mais pour un seul message (typiquement dans un sendall)
+
+        message_content ne doit pas contenir le string &#39;|&#39;
+
+        :number = int
+        :message = string [format : numberfrom&amp;&amp;pattern&amp;&amp;message_content]
+        return: liste_data de doublons (p,m) créés par pattern_recognition
+        &#34;&#34;&#34;
+
+        liste_triplestring = message.split(&#39;|&#39;)
+        del liste_triplestring[-1]
+        liste_data = []
+
+        # Ici, liste_triplestring ne contient qu&#39;un élément
+        for triplestring in liste_triplestring:
+
+            if triplestring.count(&#39;|&#39;)&gt;1 :
+                print(&#34;[BUG] Le message reçu contient plusieurs occurences de &#39;|&#39;&#34;)
+
+            infolist = triplestring.split(&#39;&amp;&amp;&#39;)
+
+            numberfrom = infolist[0]
+
+            pattern = infolist[1] # pattern
+
+            message_content = &#34;&amp;&amp;&#34;.join(infolist[2:-1]) # le contenu du message sera compris entre le premier &#39;&amp;&amp;&#39; et le dernier &#39;&amp;&amp;&#39;
+
+            p,m = self.pattern_recognition(number,pattern,message_content)
+
+            return(p,m)
+
+    # == patter_recognition ==
+    def pattern_recognition(self,number,pattern,message_content):
+        &#34;&#34;&#34;
+        Reconnaît les motifs d&#39;un seul message
+
+        Motifs actuels : SENDTOALL; LISTEN; PRINT;
+
+        :number = int
+        :message_content = string [c&#39;est la partie message du format : numberfrom&amp;&amp;pattern&amp;&amp;message_content&amp;&amp;end| et qui ne contient pas &#39;&amp;&amp;end|&#39; ]
+        return: (pattern, message_content) ou (&#39;&#39;,&#39;&#39;)
+        &#34;&#34;&#34;
+
+        if pattern == &#34;TREATDATA&#34;:
+            return(pattern,message_content)
+        elif pattern == &#34;PATTERN2&#34;:
+            return(pattern,message_content)
+        elif pattern == &#34;PATTERN3&#34;:
+            return(pattern,message_content)
+        elif pattern == &#34;PATTERN4&#34;:
+            return(pattern,message_content)
+        elif pattern == &#34;PATTERN5&#34;:
+            return(pattern,message_content)
+        elif pattern == &#34;SENDTOALL&#34;:
+            # message_content est du format message, avec ou sans le &amp;&amp;end|
+            # envoie la commande que voulait envoyer à la base le client n°number
+            self.send_everyone_except(number,message_content)
+            print(&#34;envoyé a tout le monde&#34;,message_content)
+
+            msg = message_content.replace(&#34;&amp;&amp;end|&#34;,&#34;&#34;)
+            return(self.check_for_one_message(number,msg+&#34;&amp;&amp;end|&#34;))
+        elif pattern == &#34;LISTEN&#34;:
+            # message_content correspond au timeout
+            try:
+                self.listen(int(message_content))
+                return(&#39;&#39;,&#39;&#39;)
+            except:
+                msg = &#34;PRINT&amp;&amp;&#34;+&#34;[BUG] Erreur de syntaxe :&#34;+pattern+message_content+&#34;&amp;&amp;end|&#34;
+                self.send_to(number,msg)
+                return(&#39;&#39;,&#39;&#39;)
+        elif pattern == &#34;PRINT&#34;:
+            print(&#34;[%s]&#34;%number,message_content)
+            return(&#39;&#39;,&#39;&#39;)
+        elif pattern == &#34;CLIENTHASCLOSED&#34;:
+            print(&#34;[PRINT] Le client numéro &#34;+str(message_content)+&#34; s&#39;est déconnecté&#34;)
+            self.client_has_closed(number)
+            return(&#39;&#39;,&#39;&#39;)
+        elif pattern == &#34;STATUS&#34;:
+            self.send_to(number,&#34;SERVER&amp;&amp;PRINT&amp;&amp;&#34;+str(self))
+            return(&#39;&#39;,&#39;&#39;)
+        else:
+            msg = &#34;SERVER&amp;&amp;PRINT&amp;&amp;&#34;+&#34;[BUG] Erreur de syntaxe :&#34;+pattern+message_content+&#34;&amp;&amp;end|&#34;
+            self.send_to(number,msg)
+            return(&#39;&#39;,&#39;&#39;)
+
+    # == close_client ==
+    def close_client(self,number):
+        &#34;&#34;&#34;
+        Ferme &#34;manuellement&#34; le client n°number, en réactualisant clientlist, nextnumber
+        Envoie un message aux autres de leur réactualisation et de la déconnexion
+
+        Cela ferme le client de son côté également (force sa déconnexion)
+
+        :number = int (du client à fermer)
+        &#34;&#34;&#34;
+        self.nextnumber -= 1
+
+        client = self.clientlist[number][0]
+
+        for i in range(0,len(self.clientlist)):
+            if i!=number:
+                self.send_to(i,&#34;SERVER&amp;&amp;CLIENTHASCLOSED&amp;&amp;%s&#34;%number)
+            if i&gt;number:
+                self.send_to(i,&#34;SERVER&amp;&amp;NUMBER&amp;&amp;%s&#34;%(i-1))
+                self.clientlist[i][2] = i-1
+
+        self.send_to(number,&#34;SERVER&amp;&amp;SERVERCLOSED&amp;&amp;mdr&#34;)
+
+        client.close()
+
+        del self.clientlist[number]
+
+    def client_has_closed(self,number):
+        &#34;&#34;&#34;
+        Ferme le client n°number qui s&#39;est déconnecté (lui-même), en réactualisant clientlist, nextnumber
+        Envoie un message aux autres de leur réactualisation et de la déconnexion
+
+        WARNING : cela ne ferme pas le client de son côté, on suppose qu&#39;il l&#39;a déjà fait lui-même
+
+        :number = int (le client qui s&#39;est déconnecté)
+        &#34;&#34;&#34;
+
+        self.nextnumber -= 1
+
+        client = self.clientlist[number][0]
+
+        for i in range(0,len(self.clientlist)):
+            if i!=number:
+                self.send_to(i,&#34;SERVER&amp;&amp;CLIENTHASCLOSED&amp;&amp;%s&#34;%number)
+            if i&gt;number:
+                self.send_to(i,&#34;SERVER&amp;&amp;NUMBER&amp;&amp;%s&#34;%(i-1))
+                self.clientlist[i][2] = i-1
+        client.close()
+
+        del self.clientlist[number]
+
+
+
+
+
+    # == close ==
+    def close(self):
+        &#34;&#34;&#34;
+        Ferme le serveur, et ferme les clients avec.
+        &#34;&#34;&#34;
+        print(&#34;[PRINT] mySocket fermé&#34;)
+        self.send_all(&#34;SERVER&amp;&amp;SERVERCLOSED&amp;&amp;_&amp;&amp;end|&#34;)
+        self.ouvert = False
+        self.mySocket.close()
+
+
+
+# == CLIENT ==
+class Client:
+    # == init ==
+    def __init__(self):
+        &#34;&#34;&#34;
+        Initialise le socket &#39;self.mySocket&#39;
+        Initialise le booléen &#39;self.ouvert&#39;
+        Initialise l&#39;entier &#39;self.number&#39;
+
+        &#34;&#34;&#34;
+        self.mySocket = socket_du_client=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.ouvert = False
+        self.number = &#34;-1&#34;
+
+    # == connect_to ==
+    def connect_to(self,ip,port):
+        &#34;&#34;&#34;
+        Tente de se connecter à l&#39;hôte &#39;ip:port&#39;
+
+        &#34;&#34;&#34;
+        try:
+            self.mySocket.connect((ip,port))
+            self.ip , self.port = ip,port
+            self.ouvert = True
+            print(&#34;[PRINT] En attente de listen de la part du serveur...&#34;)
+        except:
+            print(&#34;[PRINT] Serveur non ouvert !&#34;)
+
+
+    # == send_all ==
+    def send_all(self,message):
+        &#34;&#34;&#34;
+        Envoie un message à tout le monde : le serveur et les autres clients
+        exemple : je veux print partout &#34;message_content&#34; --&gt; client.send_all(numberfrom+&#34;&amp;&amp;&#34;+pattern+&#34;&amp;&amp;&#34;+message_content)
+        numberfrom est
+
+        On peut mettre &#39;&amp;&amp;end|&#39; dedans ou non, il sera de toute façon remplacé
+
+        Attention : si le symbole &#39;&amp;&#39; est utilisé pour autre chose, il y a des risques d&#39;erreur de syntaxe
+
+        :message = string du format numberfrom&amp;&amp;pattern&amp;&amp;message_content(optionnel : &amp;&amp;end|)
+        return: None
+        &#34;&#34;&#34;
+        message = message.replace(&#34;&amp;&amp;end|&#34;,&#34;&#34;)
+        if message == &#34;&#34;:
+            pass
+        elif &#34;|&#34; in message:
+            print(&#34;[PRINT] Erreur : il ne doit pas y avoir &#39;|&#39; dans votre message&#34;)
+        else:
+            try:
+                self.mySocket.send((&#34;%s&amp;&amp;SENDTOALL&amp;&amp;&#34;%self.number+message+&#34;&amp;&amp;end|&#34;).encode())
+            except:
+                print(&#34;[PRINT] Erreur d&#39;envoie vers all&#34;)
+
+    # == send_server ==
+    def send_server(self,message):
+        &#34;&#34;&#34;
+        Envoie un message au serveur
+
+        exemple : je veux print au serveur &#34;message_content&#34; --&gt; client.send_server(numberfrom+&#34;&amp;&amp;&#34;+pattern+&#34;&amp;&amp;&#34;+message_content)
+        On peut mettre &#39;&amp;&amp;end|&#39; dedans ou non, il sera de toute façon remplacé
+
+        Attention : si le symbole &#39;&amp;&#39; est utilisé pour autre chose, il y a des risques d&#39;erreur de syntaxe
+
+        :message = string du format numberfrom&amp;&amp;pattern&amp;&amp;message_content(optionnel : &amp;&amp;end|)
+        return: None
+        &#34;&#34;&#34;
+        message = message.replace(&#34;&amp;&amp;end|&#34;,&#34;&#34;)
+
+        if message ==&#34;&#34;:
+            pass
+        elif &#34;|&#34; in message:
+            print(&#34;[PRINT] Erreur : il ne doit pas y avoir &#39;|&#39; dans votre message&#34;)
+        else:
+            try:
+                self.mySocket.send((message+&#34;&amp;&amp;end|&#34;).encode())
+            except:
+                print(&#34;[PRINT] Erreur d&#39;envoie vers server&#34;)
+
+    # == receive ==
+    def receive(self):
+        &#34;&#34;&#34;
+        A mettre dans une **LOOP**
+
+        Tente de recevoir un message du serveur (potentiellement plusieurs messages en même temps)
+        message = string [format : numberfrom&amp;&amp;pattern&amp;&amp;message_content&amp;&amp;end|]
+
+        return: liste_data (la liste d&#39;informations reçus par le serveur, chaque information est un tupple (pattern,message_content))
+        &#34;&#34;&#34;
+
+        try:
+            self.mySocket.settimeout(0.1)
+            message=self.mySocket.recv(4096).decode()
+        except:
+            message=&#34;&#34;
+
+        liste_data =self.treat_received_message(message)
+        return(liste_data)
+
+    def treat_received_message(self,message):
+        &#34;&#34;&#34;
+        Traite les messages reçus
+        Déroulement :
+        1) Détecte si plusieurs messages ont été reçus en même temps (le serveur a envoyé plusieurs msg d&#39;un coup par exemple) avec la méthode check_for_multiple_messages
+        2) Traite chacun de ces messages individuellement avec la méthode check_for_multiple_messages
+        3)  Message vide : Renvoie une liste vide
+            Message non vide : Les motifs &#34;TREATDATA&#34; seront ajoutés à une liste dans un tupple (pattern,message_content)
+                               Les autres motifs seront traités par la fonction pattern_recognition()
+
+        Les motifs sont entièrement modifiables !
+
+
+        :number = int
+        :message = string [format : numberfrom&amp;&amp;pattern&amp;&amp;message_content&amp;&amp;end|]
+        &#34;&#34;&#34;
+
+        if message == &#34;&#34;:
+            return([])
+        else:
+            return(self.check_for_multiple_messages(message))
+
+    def check_for_multiple_messages(self,message):
+        &#34;&#34;&#34;
+        Détecte si un ou plusieurs messages ont été envoyés, puis les envoie vers pattern_recognition
+
+        message_content ne doit pas contenir le string &#39;|&#39;
+        message_content peut être comme le format de message, mais sans le &amp;&amp;end| à la fin
+        message_content peut être un simple string non formatté, tant qu&#39;il n&#39;y a pas &#39;|&#39; à l&#39;intérieur
+
+        :number = int
+        :message = string [format : numberfrom&amp;&amp;pattern&amp;&amp;message_content&amp;&amp;end|]
+        return: liste_data de doublons (p,m) créés par pattern_recognition
+        &#34;&#34;&#34;
+
+
+        liste_triplestring = message.split(&#39;|&#39;)
+        del liste_triplestring[-1]
+        liste_data = []
+
+        for triplestring in liste_triplestring:
+
+            if triplestring.count(&#39;|&#39;)&gt;1 :
+                print(&#34;[BUG] Le message reçu contient plusieurs occurences de &#39;|&#39;&#34;)
+
+
+            infolist = triplestring.split(&#39;&amp;&amp;&#39;)
+
+
+            numberfrom = infolist[0]
+
+            pattern = infolist[1] # pattern
+
+
+            message_content = &#34;&amp;&amp;&#34;.join(infolist[2:-1]) # le contenu du message sera compris entre le premier &#39;&amp;&amp;&#39; et le dernier &#39;&amp;&amp;&#39;
+
+
+            p,m = self.pattern_recognition(numberfrom,pattern,message_content)
+
+            if (p,m)!=(&#34;&#34;,&#34;&#34;):
+                liste_data.append( (p,m) )
+
+        return(liste_data)
+
+    # == pattern_recognition ==
+    def pattern_recognition(self,numberfrom,pattern,message_content):
+        &#34;&#34;&#34;
+        Reconnaît les motifs d&#39;un seul message
+
+        Motifs actuels : TREATDATA; NUMBER; PRINT; CLIENTHASCLOSED; SERVERCLOSED; STATUS
+
+        :number = int
+        :message_content = string [c&#39;est la partie message du format : numberfrom&amp;&amp;pattern&amp;&amp;message_content&amp;&amp;end| et qui ne contient pas &#39;&amp;&amp;end|&#39; ]
+        return: (pattern, message_content) ou (&#39;&#39;,&#39;&#39;)
+        &#34;&#34;&#34;
+
+        if pattern == &#34;TREATDATA&#34;:
+            return(pattern,message_content)
+        elif pattern == &#34;PATTERN2&#34;:
+            return(pattern,message_content)
+        elif pattern == &#34;PATTERN3&#34;:
+            return(pattern,message_content)
+        elif pattern == &#34;PATTERN4&#34;:
+            return(pattern,message_content)
+        elif pattern == &#34;PATTERN5&#34;:
+            return(pattern,message_content)
+        elif pattern == &#34;NUMBER&#34;:
+            # message_content est le nombre attribué au client
+            if self.number==&#34;-1&#34;:
+                self.number = str(message_content)
+                print(&#34;[PRINT] Connexion effectuée ! Je suis le client n°%s&#34;%self.number)
+                return(&#39;&#39;,&#39;&#39;)
+            elif self.number != str(message_content):
+                self.number = str(message_content)
+                print(&#34;[PRINT] J&#39;ai changé de numéro ! Je suis maintenant le client n°%s&#34;%self.number)
+                return(&#39;&#39;,&#39;&#39;)
+        elif pattern == &#34;CLIENTHASCLOSED&#34;:
+            # message_content est le numéro du client qui a fermé
+            print(&#34;[PRINT] Le client numéro &#34;+str(message_content)+&#34; s&#39;est déconnecté&#34;)
+            return(&#39;&#39;,&#39;&#39;)
+        elif pattern == &#34;PRINT&#34;:
+            print(&#34;[%s]&#34;%numberfrom,message_content)
+            return(&#39;&#39;,&#39;&#39;)
+        elif pattern == &#34;SERVERCLOSED&#34;:
+            # message_content ne contient rien d&#39;intéressant
+            print(&#34;[PRINT] Vous avez été déconnecté par le serveur !&#34;)
+            self.ouvert = False
+            self.close()
+            return(&#39;&#39;,&#39;&#39;)
+
+        elif pattern == &#34;STATUS&#34;:
+            # ce message n&#39;était pas destiné au client
+            return(&#39;&#39;,&#39;&#39;)
+        else:
+            msg = &#34;%s&amp;&amp;PRINT&amp;&amp;&#34;%self.number+&#34;[BUG] Erreur de syntaxe :&#34;+numberfrom+&#34; &#34;+pattern+&#34; &#34;+message_content
+            self.send_server(msg)
+            return(&#39;&#39;,&#39;&#39;)
+
+
+    # == close ==
+    def close(self):
+        &#34;&#34;&#34;
+        Ferme le client, et envoie un message au serveur (si ce n&#39;est pas déjà fait)
+
+        Si self.ouvert == True, alors c&#39;est une fermeture manuelle
+        Sinon, c&#39;est que le serveur a shutdown manuellement ce client
+        &#34;&#34;&#34;
+        if self.ouvert:
+            self.send_server(&#34;%s&amp;&amp;CLIENTHASCLOSED&amp;&amp;%s&#34;%(self.number,self.number))
+        self.mySocket.close()
+        self.ouvert = False
+        print(&#34;[PRINT] mySocket fermé&#34;)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="mysocketmodule.Client"><code class="flex name class">
+<span>class <span class="ident">Client</span></span>
+</code></dt>
+<dd>
+<section class="desc"><p>Initialise le socket 'self.mySocket'
+Initialise le booléen 'self.ouvert'
+Initialise l'entier 'self.number'</p></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Client:
+    # == init ==
+    def __init__(self):
+        &#34;&#34;&#34;
+        Initialise le socket &#39;self.mySocket&#39;
+        Initialise le booléen &#39;self.ouvert&#39;
+        Initialise l&#39;entier &#39;self.number&#39;
+
+        &#34;&#34;&#34;
+        self.mySocket = socket_du_client=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.ouvert = False
+        self.number = &#34;-1&#34;
+
+    # == connect_to ==
+    def connect_to(self,ip,port):
+        &#34;&#34;&#34;
+        Tente de se connecter à l&#39;hôte &#39;ip:port&#39;
+
+        &#34;&#34;&#34;
+        try:
+            self.mySocket.connect((ip,port))
+            self.ip , self.port = ip,port
+            self.ouvert = True
+            print(&#34;[PRINT] En attente de listen de la part du serveur...&#34;)
+        except:
+            print(&#34;[PRINT] Serveur non ouvert !&#34;)
+
+
+    # == send_all ==
+    def send_all(self,message):
+        &#34;&#34;&#34;
+        Envoie un message à tout le monde : le serveur et les autres clients
+        exemple : je veux print partout &#34;message_content&#34; --&gt; client.send_all(numberfrom+&#34;&amp;&amp;&#34;+pattern+&#34;&amp;&amp;&#34;+message_content)
+        numberfrom est
+
+        On peut mettre &#39;&amp;&amp;end|&#39; dedans ou non, il sera de toute façon remplacé
+
+        Attention : si le symbole &#39;&amp;&#39; est utilisé pour autre chose, il y a des risques d&#39;erreur de syntaxe
+
+        :message = string du format numberfrom&amp;&amp;pattern&amp;&amp;message_content(optionnel : &amp;&amp;end|)
+        return: None
+        &#34;&#34;&#34;
+        message = message.replace(&#34;&amp;&amp;end|&#34;,&#34;&#34;)
+        if message == &#34;&#34;:
+            pass
+        elif &#34;|&#34; in message:
+            print(&#34;[PRINT] Erreur : il ne doit pas y avoir &#39;|&#39; dans votre message&#34;)
+        else:
+            try:
+                self.mySocket.send((&#34;%s&amp;&amp;SENDTOALL&amp;&amp;&#34;%self.number+message+&#34;&amp;&amp;end|&#34;).encode())
+            except:
+                print(&#34;[PRINT] Erreur d&#39;envoie vers all&#34;)
+
+    # == send_server ==
+    def send_server(self,message):
+        &#34;&#34;&#34;
+        Envoie un message au serveur
+
+        exemple : je veux print au serveur &#34;message_content&#34; --&gt; client.send_server(numberfrom+&#34;&amp;&amp;&#34;+pattern+&#34;&amp;&amp;&#34;+message_content)
+        On peut mettre &#39;&amp;&amp;end|&#39; dedans ou non, il sera de toute façon remplacé
+
+        Attention : si le symbole &#39;&amp;&#39; est utilisé pour autre chose, il y a des risques d&#39;erreur de syntaxe
+
+        :message = string du format numberfrom&amp;&amp;pattern&amp;&amp;message_content(optionnel : &amp;&amp;end|)
+        return: None
+        &#34;&#34;&#34;
+        message = message.replace(&#34;&amp;&amp;end|&#34;,&#34;&#34;)
+
+        if message ==&#34;&#34;:
+            pass
+        elif &#34;|&#34; in message:
+            print(&#34;[PRINT] Erreur : il ne doit pas y avoir &#39;|&#39; dans votre message&#34;)
+        else:
+            try:
+                self.mySocket.send((message+&#34;&amp;&amp;end|&#34;).encode())
+            except:
+                print(&#34;[PRINT] Erreur d&#39;envoie vers server&#34;)
+
+    # == receive ==
+    def receive(self):
+        &#34;&#34;&#34;
+        A mettre dans une **LOOP**
+
+        Tente de recevoir un message du serveur (potentiellement plusieurs messages en même temps)
+        message = string [format : numberfrom&amp;&amp;pattern&amp;&amp;message_content&amp;&amp;end|]
+
+        return: liste_data (la liste d&#39;informations reçus par le serveur, chaque information est un tupple (pattern,message_content))
+        &#34;&#34;&#34;
+
+        try:
+            self.mySocket.settimeout(0.1)
+            message=self.mySocket.recv(4096).decode()
+        except:
+            message=&#34;&#34;
+
+        liste_data =self.treat_received_message(message)
+        return(liste_data)
+
+    def treat_received_message(self,message):
+        &#34;&#34;&#34;
+        Traite les messages reçus
+        Déroulement :
+        1) Détecte si plusieurs messages ont été reçus en même temps (le serveur a envoyé plusieurs msg d&#39;un coup par exemple) avec la méthode check_for_multiple_messages
+        2) Traite chacun de ces messages individuellement avec la méthode check_for_multiple_messages
+        3)  Message vide : Renvoie une liste vide
+            Message non vide : Les motifs &#34;TREATDATA&#34; seront ajoutés à une liste dans un tupple (pattern,message_content)
+                               Les autres motifs seront traités par la fonction pattern_recognition()
+
+        Les motifs sont entièrement modifiables !
+
+
+        :number = int
+        :message = string [format : numberfrom&amp;&amp;pattern&amp;&amp;message_content&amp;&amp;end|]
+        &#34;&#34;&#34;
+
+        if message == &#34;&#34;:
+            return([])
+        else:
+            return(self.check_for_multiple_messages(message))
+
+    def check_for_multiple_messages(self,message):
+        &#34;&#34;&#34;
+        Détecte si un ou plusieurs messages ont été envoyés, puis les envoie vers pattern_recognition
+
+        message_content ne doit pas contenir le string &#39;|&#39;
+        message_content peut être comme le format de message, mais sans le &amp;&amp;end| à la fin
+        message_content peut être un simple string non formatté, tant qu&#39;il n&#39;y a pas &#39;|&#39; à l&#39;intérieur
+
+        :number = int
+        :message = string [format : numberfrom&amp;&amp;pattern&amp;&amp;message_content&amp;&amp;end|]
+        return: liste_data de doublons (p,m) créés par pattern_recognition
+        &#34;&#34;&#34;
+
+
+        liste_triplestring = message.split(&#39;|&#39;)
+        del liste_triplestring[-1]
+        liste_data = []
+
+        for triplestring in liste_triplestring:
+
+            if triplestring.count(&#39;|&#39;)&gt;1 :
+                print(&#34;[BUG] Le message reçu contient plusieurs occurences de &#39;|&#39;&#34;)
+
+
+            infolist = triplestring.split(&#39;&amp;&amp;&#39;)
+
+
+            numberfrom = infolist[0]
+
+            pattern = infolist[1] # pattern
+
+
+            message_content = &#34;&amp;&amp;&#34;.join(infolist[2:-1]) # le contenu du message sera compris entre le premier &#39;&amp;&amp;&#39; et le dernier &#39;&amp;&amp;&#39;
+
+
+            p,m = self.pattern_recognition(numberfrom,pattern,message_content)
+
+            if (p,m)!=(&#34;&#34;,&#34;&#34;):
+                liste_data.append( (p,m) )
+
+        return(liste_data)
+
+    # == pattern_recognition ==
+    def pattern_recognition(self,numberfrom,pattern,message_content):
+        &#34;&#34;&#34;
+        Reconnaît les motifs d&#39;un seul message
+
+        Motifs actuels : TREATDATA; NUMBER; PRINT; CLIENTHASCLOSED; SERVERCLOSED; STATUS
+
+        :number = int
+        :message_content = string [c&#39;est la partie message du format : numberfrom&amp;&amp;pattern&amp;&amp;message_content&amp;&amp;end| et qui ne contient pas &#39;&amp;&amp;end|&#39; ]
+        return: (pattern, message_content) ou (&#39;&#39;,&#39;&#39;)
+        &#34;&#34;&#34;
+
+        if pattern == &#34;TREATDATA&#34;:
+            return(pattern,message_content)
+        elif pattern == &#34;PATTERN2&#34;:
+            return(pattern,message_content)
+        elif pattern == &#34;PATTERN3&#34;:
+            return(pattern,message_content)
+        elif pattern == &#34;PATTERN4&#34;:
+            return(pattern,message_content)
+        elif pattern == &#34;PATTERN5&#34;:
+            return(pattern,message_content)
+        elif pattern == &#34;NUMBER&#34;:
+            # message_content est le nombre attribué au client
+            if self.number==&#34;-1&#34;:
+                self.number = str(message_content)
+                print(&#34;[PRINT] Connexion effectuée ! Je suis le client n°%s&#34;%self.number)
+                return(&#39;&#39;,&#39;&#39;)
+            elif self.number != str(message_content):
+                self.number = str(message_content)
+                print(&#34;[PRINT] J&#39;ai changé de numéro ! Je suis maintenant le client n°%s&#34;%self.number)
+                return(&#39;&#39;,&#39;&#39;)
+        elif pattern == &#34;CLIENTHASCLOSED&#34;:
+            # message_content est le numéro du client qui a fermé
+            print(&#34;[PRINT] Le client numéro &#34;+str(message_content)+&#34; s&#39;est déconnecté&#34;)
+            return(&#39;&#39;,&#39;&#39;)
+        elif pattern == &#34;PRINT&#34;:
+            print(&#34;[%s]&#34;%numberfrom,message_content)
+            return(&#39;&#39;,&#39;&#39;)
+        elif pattern == &#34;SERVERCLOSED&#34;:
+            # message_content ne contient rien d&#39;intéressant
+            print(&#34;[PRINT] Vous avez été déconnecté par le serveur !&#34;)
+            self.ouvert = False
+            self.close()
+            return(&#39;&#39;,&#39;&#39;)
+
+        elif pattern == &#34;STATUS&#34;:
+            # ce message n&#39;était pas destiné au client
+            return(&#39;&#39;,&#39;&#39;)
+        else:
+            msg = &#34;%s&amp;&amp;PRINT&amp;&amp;&#34;%self.number+&#34;[BUG] Erreur de syntaxe :&#34;+numberfrom+&#34; &#34;+pattern+&#34; &#34;+message_content
+            self.send_server(msg)
+            return(&#39;&#39;,&#39;&#39;)
+
+
+    # == close ==
+    def close(self):
+        &#34;&#34;&#34;
+        Ferme le client, et envoie un message au serveur (si ce n&#39;est pas déjà fait)
+
+        Si self.ouvert == True, alors c&#39;est une fermeture manuelle
+        Sinon, c&#39;est que le serveur a shutdown manuellement ce client
+        &#34;&#34;&#34;
+        if self.ouvert:
+            self.send_server(&#34;%s&amp;&amp;CLIENTHASCLOSED&amp;&amp;%s&#34;%(self.number,self.number))
+        self.mySocket.close()
+        self.ouvert = False
+        print(&#34;[PRINT] mySocket fermé&#34;)</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="mysocketmodule.Client.check_for_multiple_messages"><code class="name flex">
+<span>def <span class="ident">check_for_multiple_messages</span></span>(<span>self, message)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Détecte si un ou plusieurs messages ont été envoyés, puis les envoie vers pattern_recognition</p>
+<p>message_content ne doit pas contenir le string '|'
+message_content peut être comme le format de message, mais sans le &amp;&amp;end| à la fin
+message_content peut être un simple string non formatté, tant qu'il n'y a pas '|' à l'intérieur</p>
+<p>:number = int
+:message = string [format : numberfrom&amp;&amp;pattern&amp;&amp;message_content&amp;&amp;end|]
+return: liste_data de doublons (p,m) créés par pattern_recognition</p></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def check_for_multiple_messages(self,message):
+    &#34;&#34;&#34;
+    Détecte si un ou plusieurs messages ont été envoyés, puis les envoie vers pattern_recognition
+
+    message_content ne doit pas contenir le string &#39;|&#39;
+    message_content peut être comme le format de message, mais sans le &amp;&amp;end| à la fin
+    message_content peut être un simple string non formatté, tant qu&#39;il n&#39;y a pas &#39;|&#39; à l&#39;intérieur
+
+    :number = int
+    :message = string [format : numberfrom&amp;&amp;pattern&amp;&amp;message_content&amp;&amp;end|]
+    return: liste_data de doublons (p,m) créés par pattern_recognition
+    &#34;&#34;&#34;
+
+
+    liste_triplestring = message.split(&#39;|&#39;)
+    del liste_triplestring[-1]
+    liste_data = []
+
+    for triplestring in liste_triplestring:
+
+        if triplestring.count(&#39;|&#39;)&gt;1 :
+            print(&#34;[BUG] Le message reçu contient plusieurs occurences de &#39;|&#39;&#34;)
+
+
+        infolist = triplestring.split(&#39;&amp;&amp;&#39;)
+
+
+        numberfrom = infolist[0]
+
+        pattern = infolist[1] # pattern
+
+
+        message_content = &#34;&amp;&amp;&#34;.join(infolist[2:-1]) # le contenu du message sera compris entre le premier &#39;&amp;&amp;&#39; et le dernier &#39;&amp;&amp;&#39;
+
+
+        p,m = self.pattern_recognition(numberfrom,pattern,message_content)
+
+        if (p,m)!=(&#34;&#34;,&#34;&#34;):
+            liste_data.append( (p,m) )
+
+    return(liste_data)</code></pre>
+</details>
+</dd>
+<dt id="mysocketmodule.Client.close"><code class="name flex">
+<span>def <span class="ident">close</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Ferme le client, et envoie un message au serveur (si ce n'est pas déjà fait)</p>
+<p>Si self.ouvert == True, alors c'est une fermeture manuelle
+Sinon, c'est que le serveur a shutdown manuellement ce client</p></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def close(self):
+    &#34;&#34;&#34;
+    Ferme le client, et envoie un message au serveur (si ce n&#39;est pas déjà fait)
+
+    Si self.ouvert == True, alors c&#39;est une fermeture manuelle
+    Sinon, c&#39;est que le serveur a shutdown manuellement ce client
+    &#34;&#34;&#34;
+    if self.ouvert:
+        self.send_server(&#34;%s&amp;&amp;CLIENTHASCLOSED&amp;&amp;%s&#34;%(self.number,self.number))
+    self.mySocket.close()
+    self.ouvert = False
+    print(&#34;[PRINT] mySocket fermé&#34;)</code></pre>
+</details>
+</dd>
+<dt id="mysocketmodule.Client.connect_to"><code class="name flex">
+<span>def <span class="ident">connect_to</span></span>(<span>self, ip, port)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Tente de se connecter à l'hôte 'ip:port'</p></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def connect_to(self,ip,port):
+    &#34;&#34;&#34;
+    Tente de se connecter à l&#39;hôte &#39;ip:port&#39;
+
+    &#34;&#34;&#34;
+    try:
+        self.mySocket.connect((ip,port))
+        self.ip , self.port = ip,port
+        self.ouvert = True
+        print(&#34;[PRINT] En attente de listen de la part du serveur...&#34;)
+    except:
+        print(&#34;[PRINT] Serveur non ouvert !&#34;)</code></pre>
+</details>
+</dd>
+<dt id="mysocketmodule.Client.pattern_recognition"><code class="name flex">
+<span>def <span class="ident">pattern_recognition</span></span>(<span>self, numberfrom, pattern, message_content)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Reconnaît les motifs d'un seul message</p>
+<p>Motifs actuels : TREATDATA; NUMBER; PRINT; CLIENTHASCLOSED; SERVERCLOSED; STATUS</p>
+<p>:number = int
+:message_content = string [c'est la partie message du format : numberfrom&amp;&amp;pattern&amp;&amp;message_content&amp;&amp;end| et qui ne contient pas '&amp;&amp;end|' ]
+return: (pattern, message_content) ou ('','')</p></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def pattern_recognition(self,numberfrom,pattern,message_content):
+    &#34;&#34;&#34;
+    Reconnaît les motifs d&#39;un seul message
+
+    Motifs actuels : TREATDATA; NUMBER; PRINT; CLIENTHASCLOSED; SERVERCLOSED; STATUS
+
+    :number = int
+    :message_content = string [c&#39;est la partie message du format : numberfrom&amp;&amp;pattern&amp;&amp;message_content&amp;&amp;end| et qui ne contient pas &#39;&amp;&amp;end|&#39; ]
+    return: (pattern, message_content) ou (&#39;&#39;,&#39;&#39;)
+    &#34;&#34;&#34;
+
+    if pattern == &#34;TREATDATA&#34;:
+        return(pattern,message_content)
+    elif pattern == &#34;PATTERN2&#34;:
+        return(pattern,message_content)
+    elif pattern == &#34;PATTERN3&#34;:
+        return(pattern,message_content)
+    elif pattern == &#34;PATTERN4&#34;:
+        return(pattern,message_content)
+    elif pattern == &#34;PATTERN5&#34;:
+        return(pattern,message_content)
+    elif pattern == &#34;NUMBER&#34;:
+        # message_content est le nombre attribué au client
+        if self.number==&#34;-1&#34;:
+            self.number = str(message_content)
+            print(&#34;[PRINT] Connexion effectuée ! Je suis le client n°%s&#34;%self.number)
+            return(&#39;&#39;,&#39;&#39;)
+        elif self.number != str(message_content):
+            self.number = str(message_content)
+            print(&#34;[PRINT] J&#39;ai changé de numéro ! Je suis maintenant le client n°%s&#34;%self.number)
+            return(&#39;&#39;,&#39;&#39;)
+    elif pattern == &#34;CLIENTHASCLOSED&#34;:
+        # message_content est le numéro du client qui a fermé
+        print(&#34;[PRINT] Le client numéro &#34;+str(message_content)+&#34; s&#39;est déconnecté&#34;)
+        return(&#39;&#39;,&#39;&#39;)
+    elif pattern == &#34;PRINT&#34;:
+        print(&#34;[%s]&#34;%numberfrom,message_content)
+        return(&#39;&#39;,&#39;&#39;)
+    elif pattern == &#34;SERVERCLOSED&#34;:
+        # message_content ne contient rien d&#39;intéressant
+        print(&#34;[PRINT] Vous avez été déconnecté par le serveur !&#34;)
+        self.ouvert = False
+        self.close()
+        return(&#39;&#39;,&#39;&#39;)
+
+    elif pattern == &#34;STATUS&#34;:
+        # ce message n&#39;était pas destiné au client
+        return(&#39;&#39;,&#39;&#39;)
+    else:
+        msg = &#34;%s&amp;&amp;PRINT&amp;&amp;&#34;%self.number+&#34;[BUG] Erreur de syntaxe :&#34;+numberfrom+&#34; &#34;+pattern+&#34; &#34;+message_content
+        self.send_server(msg)
+        return(&#39;&#39;,&#39;&#39;)</code></pre>
+</details>
+</dd>
+<dt id="mysocketmodule.Client.receive"><code class="name flex">
+<span>def <span class="ident">receive</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>A mettre dans une <strong>LOOP</strong></p>
+<p>Tente de recevoir un message du serveur (potentiellement plusieurs messages en même temps)
+message = string [format : numberfrom&amp;&amp;pattern&amp;&amp;message_content&amp;&amp;end|]</p>
+<p>return: liste_data (la liste d'informations reçus par le serveur, chaque information est un tupple (pattern,message_content))</p></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def receive(self):
+    &#34;&#34;&#34;
+    A mettre dans une **LOOP**
+
+    Tente de recevoir un message du serveur (potentiellement plusieurs messages en même temps)
+    message = string [format : numberfrom&amp;&amp;pattern&amp;&amp;message_content&amp;&amp;end|]
+
+    return: liste_data (la liste d&#39;informations reçus par le serveur, chaque information est un tupple (pattern,message_content))
+    &#34;&#34;&#34;
+
+    try:
+        self.mySocket.settimeout(0.1)
+        message=self.mySocket.recv(4096).decode()
+    except:
+        message=&#34;&#34;
+
+    liste_data =self.treat_received_message(message)
+    return(liste_data)</code></pre>
+</details>
+</dd>
+<dt id="mysocketmodule.Client.send_all"><code class="name flex">
+<span>def <span class="ident">send_all</span></span>(<span>self, message)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Envoie un message à tout le monde : le serveur et les autres clients
+exemple : je veux print partout "message_content" &ndash;&gt; client.send_all(numberfrom+"&amp;&amp;"+pattern+"&amp;&amp;"+message_content)
+numberfrom est</p>
+<p>On peut mettre '&amp;&amp;end|' dedans ou non, il sera de toute façon remplacé</p>
+<p>Attention : si le symbole '&amp;' est utilisé pour autre chose, il y a des risques d'erreur de syntaxe</p>
+<p>:message = string du format numberfrom&amp;&amp;pattern&amp;&amp;message_content(optionnel : &amp;&amp;end|)
+return: None</p></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def send_all(self,message):
+    &#34;&#34;&#34;
+    Envoie un message à tout le monde : le serveur et les autres clients
+    exemple : je veux print partout &#34;message_content&#34; --&gt; client.send_all(numberfrom+&#34;&amp;&amp;&#34;+pattern+&#34;&amp;&amp;&#34;+message_content)
+    numberfrom est
+
+    On peut mettre &#39;&amp;&amp;end|&#39; dedans ou non, il sera de toute façon remplacé
+
+    Attention : si le symbole &#39;&amp;&#39; est utilisé pour autre chose, il y a des risques d&#39;erreur de syntaxe
+
+    :message = string du format numberfrom&amp;&amp;pattern&amp;&amp;message_content(optionnel : &amp;&amp;end|)
+    return: None
+    &#34;&#34;&#34;
+    message = message.replace(&#34;&amp;&amp;end|&#34;,&#34;&#34;)
+    if message == &#34;&#34;:
+        pass
+    elif &#34;|&#34; in message:
+        print(&#34;[PRINT] Erreur : il ne doit pas y avoir &#39;|&#39; dans votre message&#34;)
+    else:
+        try:
+            self.mySocket.send((&#34;%s&amp;&amp;SENDTOALL&amp;&amp;&#34;%self.number+message+&#34;&amp;&amp;end|&#34;).encode())
+        except:
+            print(&#34;[PRINT] Erreur d&#39;envoie vers all&#34;)</code></pre>
+</details>
+</dd>
+<dt id="mysocketmodule.Client.send_server"><code class="name flex">
+<span>def <span class="ident">send_server</span></span>(<span>self, message)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Envoie un message au serveur</p>
+<p>exemple : je veux print au serveur "message_content" &ndash;&gt; client.send_server(numberfrom+"&amp;&amp;"+pattern+"&amp;&amp;"+message_content)
+On peut mettre '&amp;&amp;end|' dedans ou non, il sera de toute façon remplacé</p>
+<p>Attention : si le symbole '&amp;' est utilisé pour autre chose, il y a des risques d'erreur de syntaxe</p>
+<p>:message = string du format numberfrom&amp;&amp;pattern&amp;&amp;message_content(optionnel : &amp;&amp;end|)
+return: None</p></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def send_server(self,message):
+    &#34;&#34;&#34;
+    Envoie un message au serveur
+
+    exemple : je veux print au serveur &#34;message_content&#34; --&gt; client.send_server(numberfrom+&#34;&amp;&amp;&#34;+pattern+&#34;&amp;&amp;&#34;+message_content)
+    On peut mettre &#39;&amp;&amp;end|&#39; dedans ou non, il sera de toute façon remplacé
+
+    Attention : si le symbole &#39;&amp;&#39; est utilisé pour autre chose, il y a des risques d&#39;erreur de syntaxe
+
+    :message = string du format numberfrom&amp;&amp;pattern&amp;&amp;message_content(optionnel : &amp;&amp;end|)
+    return: None
+    &#34;&#34;&#34;
+    message = message.replace(&#34;&amp;&amp;end|&#34;,&#34;&#34;)
+
+    if message ==&#34;&#34;:
+        pass
+    elif &#34;|&#34; in message:
+        print(&#34;[PRINT] Erreur : il ne doit pas y avoir &#39;|&#39; dans votre message&#34;)
+    else:
+        try:
+            self.mySocket.send((message+&#34;&amp;&amp;end|&#34;).encode())
+        except:
+            print(&#34;[PRINT] Erreur d&#39;envoie vers server&#34;)</code></pre>
+</details>
+</dd>
+<dt id="mysocketmodule.Client.treat_received_message"><code class="name flex">
+<span>def <span class="ident">treat_received_message</span></span>(<span>self, message)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Traite les messages reçus
+Déroulement :
+1) Détecte si plusieurs messages ont été reçus en même temps (le serveur a envoyé plusieurs msg d'un coup par exemple) avec la méthode check_for_multiple_messages
+2) Traite chacun de ces messages individuellement avec la méthode check_for_multiple_messages
+3)
+Message vide : Renvoie une liste vide
+Message non vide : Les motifs "TREATDATA" seront ajoutés à une liste dans un tupple (pattern,message_content)
+Les autres motifs seront traités par la fonction pattern_recognition()</p>
+<p>Les motifs sont entièrement modifiables !</p>
+<p>:number = int
+:message = string [format : numberfrom&amp;&amp;pattern&amp;&amp;message_content&amp;&amp;end|]</p></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def treat_received_message(self,message):
+    &#34;&#34;&#34;
+    Traite les messages reçus
+    Déroulement :
+    1) Détecte si plusieurs messages ont été reçus en même temps (le serveur a envoyé plusieurs msg d&#39;un coup par exemple) avec la méthode check_for_multiple_messages
+    2) Traite chacun de ces messages individuellement avec la méthode check_for_multiple_messages
+    3)  Message vide : Renvoie une liste vide
+        Message non vide : Les motifs &#34;TREATDATA&#34; seront ajoutés à une liste dans un tupple (pattern,message_content)
+                           Les autres motifs seront traités par la fonction pattern_recognition()
+
+    Les motifs sont entièrement modifiables !
+
+
+    :number = int
+    :message = string [format : numberfrom&amp;&amp;pattern&amp;&amp;message_content&amp;&amp;end|]
+    &#34;&#34;&#34;
+
+    if message == &#34;&#34;:
+        return([])
+    else:
+        return(self.check_for_multiple_messages(message))</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="mysocketmodule.Server"><code class="flex name class">
+<span>class <span class="ident">Server</span></span>
+<span>(</span><span>port)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Initialise le socket serveur 'self.mySocket'
+Initialise la liste vide 'self.clientlist'
+Initialise le booléen 'self.ouvert' à False
+Initialise l'entier 'self.nextnumber' à 0</p></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Server:
+
+    # == __init__ ==
+    def __init__(self,port):
+        &#34;&#34;&#34;
+        Initialise le socket serveur &#39;self.mySocket&#39;
+        Initialise la liste vide &#39;self.clientlist&#39;
+        Initialise le booléen &#39;self.ouvert&#39; à False
+        Initialise l&#39;entier &#39;self.nextnumber&#39; à 0
+        &#34;&#34;&#34;
+        self.mySocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.mySocket.bind((&#39;&#39;,port)) # &#39;&#39; signifie qu&#39;il acceptera les requêtes peu importe l&#39;interface (localhost, 192.0. ...)
+
+        self.clientlist = [] # liste des clients, où l&#39;indice i est [client,addr,self]
+
+        self.ouvert = False
+
+        self.nextnumber = 0
+
+    # == __repr__ ==
+    def __repr__(self):
+        &#34;&#34;&#34;
+        Renvoie un string de la forme :
+        [0] ip:port
+        [1] ip:port
+        ...
+
+        &#34;&#34;&#34;
+
+        output = &#34;&#34;
+
+        for liste in self.clientlist:
+            client,addr,n = liste
+            ip,port = addr
+
+
+            output += &#34;[%s] &#34;%n + str(ip) + &#34;:&#34; + str(port) + &#34;\n&#34;
+
+        return(output)
+
+    # == listen ==
+    def listen(self,timeout):
+        &#34;&#34;&#34;
+        Le socket s&#39;ouvre pour recevoir des connexions extérieurs, cela va FREEZE le déroulement des opérations jusqu&#39;à obtiention d&#39;un signal
+
+        :timeout = float (temps d&#39;attente en seconde avant expiration)
+        &#34;&#34;&#34;
+
+        try:
+            self.mySocket.settimeout(timeout)
+            self.mySocket.listen(10)
+            client, addr = self.mySocket.accept() # conn_avec_client est un socket
+            self.clientlist.append([client,addr,self.nextnumber])
+
+            print (&#34;[PRINT] Connexion de : &#34;,addr,self.nextnumber)
+            self.send_to(self.nextnumber,&#34;SERVER&amp;&amp;NUMBER&amp;&amp;%s&amp;&amp;end|&#34;%self.nextnumber)
+            self.send_everyone_except(self.nextnumber,&#34;SERVER&amp;&amp;PRINT&amp;&amp;Connexion du client n°%s&#34;%self.nextnumber)
+
+            self.ouvert = True
+
+            self.nextnumber += 1
+
+        except:
+            print(&#34;Client introuvable (%s s timeout)&#34;%timeout)
+
+    # == send_all ==
+    def send_all(self,message):
+        &#34;&#34;&#34;
+        Envoie un message à tous les clients
+
+        exemple : je veux print partout &#34;message_content&#34; --&gt; server.send(numberfrom+&#34;&amp;&amp;&#34;+pattern+&#34;&amp;&amp;&#34;+message_content)
+        numberfrom est un string qui identifie l&#39;envoyeur (peut être &#34;abc123&#34; par exemple)
+        pattern est un string, motif à utiliser
+        message_content est un string, argument du motif
+
+        WARNING : si le symbole &#39;&amp;&#39; est utilisé pour autre chose, il y a des risques d&#39;erreur de syntaxe
+        :message : string [format du message : numberfrom&amp;&amp;pattern&amp;&amp;message_content]
+        &#34;&#34;&#34;
+
+        message = message.replace(&#34;&amp;&amp;end|&#34;,&#34;&#34;)
+
+        if message == &#34;&#34;:
+            pass
+        elif &#34;|&#34; in message:
+            print(&#34;[PRINT] Erreur : il ne doit pas y avoir &#39;|&#39; dans votre message&#34;)
+        else:
+            for client,addr,number in self.clientlist:
+                try:
+                    client.send((message+&#34;&amp;&amp;end|&#34;).encode())
+                except:
+                    print(&#34;[PRINT] Erreur d&#39;envoie avec&#34;,addr,number)
+
+    # == send_everyone_except ==
+    def send_everyone_except(self,number,message):
+        &#34;&#34;&#34;
+        Envoie un message à tous les clients, excepté le n°(number)
+
+        exemple : je veux print partout &#34;message_content&#34; --&gt; server.send_everyone_except(numberfrom+&#34;&amp;&amp;&#34;+pattern+&#34;&amp;&amp;&#34;+message_content)
+        numberfrom est un string qui identifie l&#39;envoyeur (peut être &#34;abc123&#34; par exemple)
+        pattern est un string, motif à utiliser
+        message_content est un string, argument du motif
+
+
+        WARNING : si le symbole &#39;&amp;&#39; est utilisé pour autre chose, il y a des risques d&#39;erreur de syntaxe
+        :number : int (numéro du client à ne pas envoyer le message)
+        :message : string [format du message : numberfrom&amp;&amp;pattern&amp;&amp;message_content]
+        &#34;&#34;&#34;
+        message = message.replace(&#34;&amp;&amp;end|&#34;,&#34;&#34;)
+
+        if message == &#34;&#34;:
+            pass
+
+        elif &#34;|&#34; in message:
+            print(&#34;[PRINT] Erreur : il ne doit pas y avoir &#39;|&#39; dans votre message&#34;)
+
+        else:
+            for client,addr,n in self.clientlist:
+                if n!=number:
+                    try:
+                        client.send((message+&#34;&amp;&amp;end|&#34;).encode())
+                    except:
+                        print(&#34;[PRINT] Erreur d&#39;envoie avec&#34;,addr,n)
+
+    # == send_to ==
+    def send_to(self,number,message):
+        &#34;&#34;&#34;
+        Envoie un message à un client en particulier
+
+        exemple : je veux print partout &#34;message_content&#34; --&gt; server.send_to(number,numberfrom+&#34;&amp;&amp;&#34;+pattern+&#34;&amp;&amp;&#34;+message_content)
+        numberfrom est un string qui identifie l&#39;envoyeur (peut être &#34;abc123&#34; par exemple)
+        pattern est un string, motif à utiliser
+        message_content est un string, argument du motif
+
+        WARNING : si le symbole &#39;&amp;&#39; est utilisé pour autre chose, il y a des risques d&#39;erreur de syntaxe
+        :number : int (numéro du client auquel on envoie le message)
+        :message : string (contenu du message à envoyer)
+        &#34;&#34;&#34;
+        message = message.replace(&#34;&amp;&amp;end|&#34;,&#34;&#34;)
+
+        if message == &#34;&#34;:
+            pass
+        elif &#34;|&#34; in message:
+            print(&#34;[PRINT] Erreur : il ne doit pas y avoir &#39;|&#39; dans votre message&#34;)
+        else:
+            client,addr,n = self.clientlist[number]
+            try:
+                client.send((message+&#34;&amp;&amp;end|&#34;).encode())
+            except:
+                print(&#34;[PRINT] Erreur d&#39;envoie avec&#34;,addr,n)
+
+    # == receive ==
+    def receive(self):
+        &#34;&#34;&#34;
+        Tente de recevoir un message, d&#39;un ou plusieurs clients
+        message = string [format : numberfrom&amp;&amp;pattern&amp;&amp;message_content]
+
+        return: liste_de_liste_data dont l&#39;indice i représente la liste d&#39;informations reçus par le client n°i (potentiellement [])
+        &#34;&#34;&#34;
+        liste_de_liste_data = []
+
+        for client,addr,n in self.clientlist :
+            try:
+                client.settimeout(0.1)
+                message=client.recv(4096).decode()
+            except:
+                message=&#34;&#34;
+            liste_de_liste_data.append( self.treat_received_message(n,message) )
+
+        return(liste_de_liste_data)
+
+    def treat_received_message(self,number,message):
+        &#34;&#34;&#34;
+        Traite les messages reçus
+        Déroulement :
+        1) Détecte si plusieurs messages ont été reçus en même temps (un client a envoyé plusieurs msg d&#39;un coup par exemple) avec la méthode check_for_multiple_messages
+        2) Traite chacun de ces messages individuellement avec la méthode check_for_multiple_messages
+        3)  Message vide : Renvoie une liste vide
+            Message non vide : Les motifs &#34;TREATDATA&#34; seront ajoutés à une liste dans un tupple (pattern,message_content)
+                               Les autres motifs seront traités par la fonction pattern_recognition()
+
+        Les motifs sont entièrement modifiables !
+
+
+        :number = int
+        :message = string [format : numberfrom&amp;&amp;pattern&amp;&amp;message_content]
+        &#34;&#34;&#34;
+
+        if message == &#34;&#34;:
+            return([])
+        else:
+            return(self.check_for_multiple_messages(number,message))
+
+    def check_for_multiple_messages(self,number,message):
+        &#34;&#34;&#34;
+        Détecte si un ou plusieurs messages ont été envoyés, puis les envoie vers pattern_recognition
+
+        message_content ne doit pas contenir le string &#39;|&#39;
+
+        :number = int
+        :message = string [format : numberfrom&amp;&amp;pattern&amp;&amp;message_content]
+        return: liste_data de doublons (p,m) créés par pattern_recognition
+        &#34;&#34;&#34;
+
+        # pme pour &#34;pattern message end&#34;
+        # Le message sera composé de la forme p1&amp;&amp;m1&amp;&amp;e|p2&amp;&amp;m2&amp;&amp;e|p3....
+        # &#34;a&amp;&amp;b&amp;&amp;c.split(&#34;&amp;&amp;&#34;) -&gt; [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;]
+
+        liste_triplestring = message.split(&#39;|&#39;)
+        del liste_triplestring[-1]
+        liste_data = []
+
+        for triplestring in liste_triplestring:
+
+            if triplestring.count(&#39;|&#39;)&gt;1 :
+                print(&#34;[BUG] Le message reçu contient plusieurs occurences de &#39;|&#39;&#34;)
+
+            infolist = triplestring.split(&#39;&amp;&amp;&#39;)
+
+            numberfrom = infolist[0]
+
+            pattern = infolist[1] # pattern
+
+            message_content = &#34;&amp;&amp;&#34;.join(infolist[2:-1]) # le contenu du message sera compris entre le premier &#39;&amp;&amp;&#39; et le dernier &#39;&amp;&amp;&#39;
+
+            p,m = self.pattern_recognition(number,pattern,message_content)
+
+            if (p,m)!=(&#34;&#34;,&#34;&#34;):
+                liste_data.append( (p,m) )
+
+        return(liste_data)
+
+
+    def check_for_one_message(self,number,message):
+        &#34;&#34;&#34;
+        Version de &#39;check_for_multiple_messages&#39; mais pour un seul message (typiquement dans un sendall)
+
+        message_content ne doit pas contenir le string &#39;|&#39;
+
+        :number = int
+        :message = string [format : numberfrom&amp;&amp;pattern&amp;&amp;message_content]
+        return: liste_data de doublons (p,m) créés par pattern_recognition
+        &#34;&#34;&#34;
+
+        liste_triplestring = message.split(&#39;|&#39;)
+        del liste_triplestring[-1]
+        liste_data = []
+
+        # Ici, liste_triplestring ne contient qu&#39;un élément
+        for triplestring in liste_triplestring:
+
+            if triplestring.count(&#39;|&#39;)&gt;1 :
+                print(&#34;[BUG] Le message reçu contient plusieurs occurences de &#39;|&#39;&#34;)
+
+            infolist = triplestring.split(&#39;&amp;&amp;&#39;)
+
+            numberfrom = infolist[0]
+
+            pattern = infolist[1] # pattern
+
+            message_content = &#34;&amp;&amp;&#34;.join(infolist[2:-1]) # le contenu du message sera compris entre le premier &#39;&amp;&amp;&#39; et le dernier &#39;&amp;&amp;&#39;
+
+            p,m = self.pattern_recognition(number,pattern,message_content)
+
+            return(p,m)
+
+    # == patter_recognition ==
+    def pattern_recognition(self,number,pattern,message_content):
+        &#34;&#34;&#34;
+        Reconnaît les motifs d&#39;un seul message
+
+        Motifs actuels : SENDTOALL; LISTEN; PRINT;
+
+        :number = int
+        :message_content = string [c&#39;est la partie message du format : numberfrom&amp;&amp;pattern&amp;&amp;message_content&amp;&amp;end| et qui ne contient pas &#39;&amp;&amp;end|&#39; ]
+        return: (pattern, message_content) ou (&#39;&#39;,&#39;&#39;)
+        &#34;&#34;&#34;
+
+        if pattern == &#34;TREATDATA&#34;:
+            return(pattern,message_content)
+        elif pattern == &#34;PATTERN2&#34;:
+            return(pattern,message_content)
+        elif pattern == &#34;PATTERN3&#34;:
+            return(pattern,message_content)
+        elif pattern == &#34;PATTERN4&#34;:
+            return(pattern,message_content)
+        elif pattern == &#34;PATTERN5&#34;:
+            return(pattern,message_content)
+        elif pattern == &#34;SENDTOALL&#34;:
+            # message_content est du format message, avec ou sans le &amp;&amp;end|
+            # envoie la commande que voulait envoyer à la base le client n°number
+            self.send_everyone_except(number,message_content)
+            print(&#34;envoyé a tout le monde&#34;,message_content)
+
+            msg = message_content.replace(&#34;&amp;&amp;end|&#34;,&#34;&#34;)
+            return(self.check_for_one_message(number,msg+&#34;&amp;&amp;end|&#34;))
+        elif pattern == &#34;LISTEN&#34;:
+            # message_content correspond au timeout
+            try:
+                self.listen(int(message_content))
+                return(&#39;&#39;,&#39;&#39;)
+            except:
+                msg = &#34;PRINT&amp;&amp;&#34;+&#34;[BUG] Erreur de syntaxe :&#34;+pattern+message_content+&#34;&amp;&amp;end|&#34;
+                self.send_to(number,msg)
+                return(&#39;&#39;,&#39;&#39;)
+        elif pattern == &#34;PRINT&#34;:
+            print(&#34;[%s]&#34;%number,message_content)
+            return(&#39;&#39;,&#39;&#39;)
+        elif pattern == &#34;CLIENTHASCLOSED&#34;:
+            print(&#34;[PRINT] Le client numéro &#34;+str(message_content)+&#34; s&#39;est déconnecté&#34;)
+            self.client_has_closed(number)
+            return(&#39;&#39;,&#39;&#39;)
+        elif pattern == &#34;STATUS&#34;:
+            self.send_to(number,&#34;SERVER&amp;&amp;PRINT&amp;&amp;&#34;+str(self))
+            return(&#39;&#39;,&#39;&#39;)
+        else:
+            msg = &#34;SERVER&amp;&amp;PRINT&amp;&amp;&#34;+&#34;[BUG] Erreur de syntaxe :&#34;+pattern+message_content+&#34;&amp;&amp;end|&#34;
+            self.send_to(number,msg)
+            return(&#39;&#39;,&#39;&#39;)
+
+    # == close_client ==
+    def close_client(self,number):
+        &#34;&#34;&#34;
+        Ferme &#34;manuellement&#34; le client n°number, en réactualisant clientlist, nextnumber
+        Envoie un message aux autres de leur réactualisation et de la déconnexion
+
+        Cela ferme le client de son côté également (force sa déconnexion)
+
+        :number = int (du client à fermer)
+        &#34;&#34;&#34;
+        self.nextnumber -= 1
+
+        client = self.clientlist[number][0]
+
+        for i in range(0,len(self.clientlist)):
+            if i!=number:
+                self.send_to(i,&#34;SERVER&amp;&amp;CLIENTHASCLOSED&amp;&amp;%s&#34;%number)
+            if i&gt;number:
+                self.send_to(i,&#34;SERVER&amp;&amp;NUMBER&amp;&amp;%s&#34;%(i-1))
+                self.clientlist[i][2] = i-1
+
+        self.send_to(number,&#34;SERVER&amp;&amp;SERVERCLOSED&amp;&amp;mdr&#34;)
+
+        client.close()
+
+        del self.clientlist[number]
+
+    def client_has_closed(self,number):
+        &#34;&#34;&#34;
+        Ferme le client n°number qui s&#39;est déconnecté (lui-même), en réactualisant clientlist, nextnumber
+        Envoie un message aux autres de leur réactualisation et de la déconnexion
+
+        WARNING : cela ne ferme pas le client de son côté, on suppose qu&#39;il l&#39;a déjà fait lui-même
+
+        :number = int (le client qui s&#39;est déconnecté)
+        &#34;&#34;&#34;
+
+        self.nextnumber -= 1
+
+        client = self.clientlist[number][0]
+
+        for i in range(0,len(self.clientlist)):
+            if i!=number:
+                self.send_to(i,&#34;SERVER&amp;&amp;CLIENTHASCLOSED&amp;&amp;%s&#34;%number)
+            if i&gt;number:
+                self.send_to(i,&#34;SERVER&amp;&amp;NUMBER&amp;&amp;%s&#34;%(i-1))
+                self.clientlist[i][2] = i-1
+        client.close()
+
+        del self.clientlist[number]
+
+
+
+
+
+    # == close ==
+    def close(self):
+        &#34;&#34;&#34;
+        Ferme le serveur, et ferme les clients avec.
+        &#34;&#34;&#34;
+        print(&#34;[PRINT] mySocket fermé&#34;)
+        self.send_all(&#34;SERVER&amp;&amp;SERVERCLOSED&amp;&amp;_&amp;&amp;end|&#34;)
+        self.ouvert = False
+        self.mySocket.close()</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="mysocketmodule.Server.check_for_multiple_messages"><code class="name flex">
+<span>def <span class="ident">check_for_multiple_messages</span></span>(<span>self, number, message)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Détecte si un ou plusieurs messages ont été envoyés, puis les envoie vers pattern_recognition</p>
+<p>message_content ne doit pas contenir le string '|'</p>
+<p>:number = int
+:message = string [format : numberfrom&amp;&amp;pattern&amp;&amp;message_content]
+return: liste_data de doublons (p,m) créés par pattern_recognition</p></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def check_for_multiple_messages(self,number,message):
+    &#34;&#34;&#34;
+    Détecte si un ou plusieurs messages ont été envoyés, puis les envoie vers pattern_recognition
+
+    message_content ne doit pas contenir le string &#39;|&#39;
+
+    :number = int
+    :message = string [format : numberfrom&amp;&amp;pattern&amp;&amp;message_content]
+    return: liste_data de doublons (p,m) créés par pattern_recognition
+    &#34;&#34;&#34;
+
+    # pme pour &#34;pattern message end&#34;
+    # Le message sera composé de la forme p1&amp;&amp;m1&amp;&amp;e|p2&amp;&amp;m2&amp;&amp;e|p3....
+    # &#34;a&amp;&amp;b&amp;&amp;c.split(&#34;&amp;&amp;&#34;) -&gt; [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;]
+
+    liste_triplestring = message.split(&#39;|&#39;)
+    del liste_triplestring[-1]
+    liste_data = []
+
+    for triplestring in liste_triplestring:
+
+        if triplestring.count(&#39;|&#39;)&gt;1 :
+            print(&#34;[BUG] Le message reçu contient plusieurs occurences de &#39;|&#39;&#34;)
+
+        infolist = triplestring.split(&#39;&amp;&amp;&#39;)
+
+        numberfrom = infolist[0]
+
+        pattern = infolist[1] # pattern
+
+        message_content = &#34;&amp;&amp;&#34;.join(infolist[2:-1]) # le contenu du message sera compris entre le premier &#39;&amp;&amp;&#39; et le dernier &#39;&amp;&amp;&#39;
+
+        p,m = self.pattern_recognition(number,pattern,message_content)
+
+        if (p,m)!=(&#34;&#34;,&#34;&#34;):
+            liste_data.append( (p,m) )
+
+    return(liste_data)</code></pre>
+</details>
+</dd>
+<dt id="mysocketmodule.Server.check_for_one_message"><code class="name flex">
+<span>def <span class="ident">check_for_one_message</span></span>(<span>self, number, message)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Version de 'check_for_multiple_messages' mais pour un seul message (typiquement dans un sendall)</p>
+<p>message_content ne doit pas contenir le string '|'</p>
+<p>:number = int
+:message = string [format : numberfrom&amp;&amp;pattern&amp;&amp;message_content]
+return: liste_data de doublons (p,m) créés par pattern_recognition</p></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def check_for_one_message(self,number,message):
+    &#34;&#34;&#34;
+    Version de &#39;check_for_multiple_messages&#39; mais pour un seul message (typiquement dans un sendall)
+
+    message_content ne doit pas contenir le string &#39;|&#39;
+
+    :number = int
+    :message = string [format : numberfrom&amp;&amp;pattern&amp;&amp;message_content]
+    return: liste_data de doublons (p,m) créés par pattern_recognition
+    &#34;&#34;&#34;
+
+    liste_triplestring = message.split(&#39;|&#39;)
+    del liste_triplestring[-1]
+    liste_data = []
+
+    # Ici, liste_triplestring ne contient qu&#39;un élément
+    for triplestring in liste_triplestring:
+
+        if triplestring.count(&#39;|&#39;)&gt;1 :
+            print(&#34;[BUG] Le message reçu contient plusieurs occurences de &#39;|&#39;&#34;)
+
+        infolist = triplestring.split(&#39;&amp;&amp;&#39;)
+
+        numberfrom = infolist[0]
+
+        pattern = infolist[1] # pattern
+
+        message_content = &#34;&amp;&amp;&#34;.join(infolist[2:-1]) # le contenu du message sera compris entre le premier &#39;&amp;&amp;&#39; et le dernier &#39;&amp;&amp;&#39;
+
+        p,m = self.pattern_recognition(number,pattern,message_content)
+
+        return(p,m)</code></pre>
+</details>
+</dd>
+<dt id="mysocketmodule.Server.client_has_closed"><code class="name flex">
+<span>def <span class="ident">client_has_closed</span></span>(<span>self, number)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Ferme le client n°number qui s'est déconnecté (lui-même), en réactualisant clientlist, nextnumber
+Envoie un message aux autres de leur réactualisation et de la déconnexion</p>
+<p>WARNING : cela ne ferme pas le client de son côté, on suppose qu'il l'a déjà fait lui-même</p>
+<p>:number = int (le client qui s'est déconnecté)</p></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def client_has_closed(self,number):
+    &#34;&#34;&#34;
+    Ferme le client n°number qui s&#39;est déconnecté (lui-même), en réactualisant clientlist, nextnumber
+    Envoie un message aux autres de leur réactualisation et de la déconnexion
+
+    WARNING : cela ne ferme pas le client de son côté, on suppose qu&#39;il l&#39;a déjà fait lui-même
+
+    :number = int (le client qui s&#39;est déconnecté)
+    &#34;&#34;&#34;
+
+    self.nextnumber -= 1
+
+    client = self.clientlist[number][0]
+
+    for i in range(0,len(self.clientlist)):
+        if i!=number:
+            self.send_to(i,&#34;SERVER&amp;&amp;CLIENTHASCLOSED&amp;&amp;%s&#34;%number)
+        if i&gt;number:
+            self.send_to(i,&#34;SERVER&amp;&amp;NUMBER&amp;&amp;%s&#34;%(i-1))
+            self.clientlist[i][2] = i-1
+    client.close()
+
+    del self.clientlist[number]</code></pre>
+</details>
+</dd>
+<dt id="mysocketmodule.Server.close"><code class="name flex">
+<span>def <span class="ident">close</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Ferme le serveur, et ferme les clients avec.</p></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def close(self):
+    &#34;&#34;&#34;
+    Ferme le serveur, et ferme les clients avec.
+    &#34;&#34;&#34;
+    print(&#34;[PRINT] mySocket fermé&#34;)
+    self.send_all(&#34;SERVER&amp;&amp;SERVERCLOSED&amp;&amp;_&amp;&amp;end|&#34;)
+    self.ouvert = False
+    self.mySocket.close()</code></pre>
+</details>
+</dd>
+<dt id="mysocketmodule.Server.close_client"><code class="name flex">
+<span>def <span class="ident">close_client</span></span>(<span>self, number)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Ferme "manuellement" le client n°number, en réactualisant clientlist, nextnumber
+Envoie un message aux autres de leur réactualisation et de la déconnexion</p>
+<p>Cela ferme le client de son côté également (force sa déconnexion)</p>
+<p>:number = int (du client à fermer)</p></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def close_client(self,number):
+    &#34;&#34;&#34;
+    Ferme &#34;manuellement&#34; le client n°number, en réactualisant clientlist, nextnumber
+    Envoie un message aux autres de leur réactualisation et de la déconnexion
+
+    Cela ferme le client de son côté également (force sa déconnexion)
+
+    :number = int (du client à fermer)
+    &#34;&#34;&#34;
+    self.nextnumber -= 1
+
+    client = self.clientlist[number][0]
+
+    for i in range(0,len(self.clientlist)):
+        if i!=number:
+            self.send_to(i,&#34;SERVER&amp;&amp;CLIENTHASCLOSED&amp;&amp;%s&#34;%number)
+        if i&gt;number:
+            self.send_to(i,&#34;SERVER&amp;&amp;NUMBER&amp;&amp;%s&#34;%(i-1))
+            self.clientlist[i][2] = i-1
+
+    self.send_to(number,&#34;SERVER&amp;&amp;SERVERCLOSED&amp;&amp;mdr&#34;)
+
+    client.close()
+
+    del self.clientlist[number]</code></pre>
+</details>
+</dd>
+<dt id="mysocketmodule.Server.listen"><code class="name flex">
+<span>def <span class="ident">listen</span></span>(<span>self, timeout)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Le socket s'ouvre pour recevoir des connexions extérieurs, cela va FREEZE le déroulement des opérations jusqu'à obtiention d'un signal</p>
+<p>:timeout = float (temps d'attente en seconde avant expiration)</p></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def listen(self,timeout):
+    &#34;&#34;&#34;
+    Le socket s&#39;ouvre pour recevoir des connexions extérieurs, cela va FREEZE le déroulement des opérations jusqu&#39;à obtiention d&#39;un signal
+
+    :timeout = float (temps d&#39;attente en seconde avant expiration)
+    &#34;&#34;&#34;
+
+    try:
+        self.mySocket.settimeout(timeout)
+        self.mySocket.listen(10)
+        client, addr = self.mySocket.accept() # conn_avec_client est un socket
+        self.clientlist.append([client,addr,self.nextnumber])
+
+        print (&#34;[PRINT] Connexion de : &#34;,addr,self.nextnumber)
+        self.send_to(self.nextnumber,&#34;SERVER&amp;&amp;NUMBER&amp;&amp;%s&amp;&amp;end|&#34;%self.nextnumber)
+        self.send_everyone_except(self.nextnumber,&#34;SERVER&amp;&amp;PRINT&amp;&amp;Connexion du client n°%s&#34;%self.nextnumber)
+
+        self.ouvert = True
+
+        self.nextnumber += 1
+
+    except:
+        print(&#34;Client introuvable (%s s timeout)&#34;%timeout)</code></pre>
+</details>
+</dd>
+<dt id="mysocketmodule.Server.pattern_recognition"><code class="name flex">
+<span>def <span class="ident">pattern_recognition</span></span>(<span>self, number, pattern, message_content)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Reconnaît les motifs d'un seul message</p>
+<p>Motifs actuels : SENDTOALL; LISTEN; PRINT;</p>
+<p>:number = int
+:message_content = string [c'est la partie message du format : numberfrom&amp;&amp;pattern&amp;&amp;message_content&amp;&amp;end| et qui ne contient pas '&amp;&amp;end|' ]
+return: (pattern, message_content) ou ('','')</p></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def pattern_recognition(self,number,pattern,message_content):
+    &#34;&#34;&#34;
+    Reconnaît les motifs d&#39;un seul message
+
+    Motifs actuels : SENDTOALL; LISTEN; PRINT;
+
+    :number = int
+    :message_content = string [c&#39;est la partie message du format : numberfrom&amp;&amp;pattern&amp;&amp;message_content&amp;&amp;end| et qui ne contient pas &#39;&amp;&amp;end|&#39; ]
+    return: (pattern, message_content) ou (&#39;&#39;,&#39;&#39;)
+    &#34;&#34;&#34;
+
+    if pattern == &#34;TREATDATA&#34;:
+        return(pattern,message_content)
+    elif pattern == &#34;PATTERN2&#34;:
+        return(pattern,message_content)
+    elif pattern == &#34;PATTERN3&#34;:
+        return(pattern,message_content)
+    elif pattern == &#34;PATTERN4&#34;:
+        return(pattern,message_content)
+    elif pattern == &#34;PATTERN5&#34;:
+        return(pattern,message_content)
+    elif pattern == &#34;SENDTOALL&#34;:
+        # message_content est du format message, avec ou sans le &amp;&amp;end|
+        # envoie la commande que voulait envoyer à la base le client n°number
+        self.send_everyone_except(number,message_content)
+        print(&#34;envoyé a tout le monde&#34;,message_content)
+
+        msg = message_content.replace(&#34;&amp;&amp;end|&#34;,&#34;&#34;)
+        return(self.check_for_one_message(number,msg+&#34;&amp;&amp;end|&#34;))
+    elif pattern == &#34;LISTEN&#34;:
+        # message_content correspond au timeout
+        try:
+            self.listen(int(message_content))
+            return(&#39;&#39;,&#39;&#39;)
+        except:
+            msg = &#34;PRINT&amp;&amp;&#34;+&#34;[BUG] Erreur de syntaxe :&#34;+pattern+message_content+&#34;&amp;&amp;end|&#34;
+            self.send_to(number,msg)
+            return(&#39;&#39;,&#39;&#39;)
+    elif pattern == &#34;PRINT&#34;:
+        print(&#34;[%s]&#34;%number,message_content)
+        return(&#39;&#39;,&#39;&#39;)
+    elif pattern == &#34;CLIENTHASCLOSED&#34;:
+        print(&#34;[PRINT] Le client numéro &#34;+str(message_content)+&#34; s&#39;est déconnecté&#34;)
+        self.client_has_closed(number)
+        return(&#39;&#39;,&#39;&#39;)
+    elif pattern == &#34;STATUS&#34;:
+        self.send_to(number,&#34;SERVER&amp;&amp;PRINT&amp;&amp;&#34;+str(self))
+        return(&#39;&#39;,&#39;&#39;)
+    else:
+        msg = &#34;SERVER&amp;&amp;PRINT&amp;&amp;&#34;+&#34;[BUG] Erreur de syntaxe :&#34;+pattern+message_content+&#34;&amp;&amp;end|&#34;
+        self.send_to(number,msg)
+        return(&#39;&#39;,&#39;&#39;)</code></pre>
+</details>
+</dd>
+<dt id="mysocketmodule.Server.receive"><code class="name flex">
+<span>def <span class="ident">receive</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Tente de recevoir un message, d'un ou plusieurs clients
+message = string [format : numberfrom&amp;&amp;pattern&amp;&amp;message_content]</p>
+<p>return: liste_de_liste_data dont l'indice i représente la liste d'informations reçus par le client n°i (potentiellement [])</p></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def receive(self):
+    &#34;&#34;&#34;
+    Tente de recevoir un message, d&#39;un ou plusieurs clients
+    message = string [format : numberfrom&amp;&amp;pattern&amp;&amp;message_content]
+
+    return: liste_de_liste_data dont l&#39;indice i représente la liste d&#39;informations reçus par le client n°i (potentiellement [])
+    &#34;&#34;&#34;
+    liste_de_liste_data = []
+
+    for client,addr,n in self.clientlist :
+        try:
+            client.settimeout(0.1)
+            message=client.recv(4096).decode()
+        except:
+            message=&#34;&#34;
+        liste_de_liste_data.append( self.treat_received_message(n,message) )
+
+    return(liste_de_liste_data)</code></pre>
+</details>
+</dd>
+<dt id="mysocketmodule.Server.send_all"><code class="name flex">
+<span>def <span class="ident">send_all</span></span>(<span>self, message)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Envoie un message à tous les clients</p>
+<p>exemple : je veux print partout "message_content" &ndash;&gt; server.send(numberfrom+"&amp;&amp;"+pattern+"&amp;&amp;"+message_content)
+numberfrom est un string qui identifie l'envoyeur (peut être "abc123" par exemple)
+pattern est un string, motif à utiliser
+message_content est un string, argument du motif</p>
+<p>WARNING : si le symbole '&amp;' est utilisé pour autre chose, il y a des risques d'erreur de syntaxe
+:message : string [format du message : numberfrom&amp;&amp;pattern&amp;&amp;message_content]</p></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def send_all(self,message):
+    &#34;&#34;&#34;
+    Envoie un message à tous les clients
+
+    exemple : je veux print partout &#34;message_content&#34; --&gt; server.send(numberfrom+&#34;&amp;&amp;&#34;+pattern+&#34;&amp;&amp;&#34;+message_content)
+    numberfrom est un string qui identifie l&#39;envoyeur (peut être &#34;abc123&#34; par exemple)
+    pattern est un string, motif à utiliser
+    message_content est un string, argument du motif
+
+    WARNING : si le symbole &#39;&amp;&#39; est utilisé pour autre chose, il y a des risques d&#39;erreur de syntaxe
+    :message : string [format du message : numberfrom&amp;&amp;pattern&amp;&amp;message_content]
+    &#34;&#34;&#34;
+
+    message = message.replace(&#34;&amp;&amp;end|&#34;,&#34;&#34;)
+
+    if message == &#34;&#34;:
+        pass
+    elif &#34;|&#34; in message:
+        print(&#34;[PRINT] Erreur : il ne doit pas y avoir &#39;|&#39; dans votre message&#34;)
+    else:
+        for client,addr,number in self.clientlist:
+            try:
+                client.send((message+&#34;&amp;&amp;end|&#34;).encode())
+            except:
+                print(&#34;[PRINT] Erreur d&#39;envoie avec&#34;,addr,number)</code></pre>
+</details>
+</dd>
+<dt id="mysocketmodule.Server.send_everyone_except"><code class="name flex">
+<span>def <span class="ident">send_everyone_except</span></span>(<span>self, number, message)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Envoie un message à tous les clients, excepté le n°(number)</p>
+<p>exemple : je veux print partout "message_content" &ndash;&gt; server.send_everyone_except(numberfrom+"&amp;&amp;"+pattern+"&amp;&amp;"+message_content)
+numberfrom est un string qui identifie l'envoyeur (peut être "abc123" par exemple)
+pattern est un string, motif à utiliser
+message_content est un string, argument du motif</p>
+<p>WARNING : si le symbole '&amp;' est utilisé pour autre chose, il y a des risques d'erreur de syntaxe
+:number : int (numéro du client à ne pas envoyer le message)
+:message : string [format du message : numberfrom&amp;&amp;pattern&amp;&amp;message_content]</p></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def send_everyone_except(self,number,message):
+    &#34;&#34;&#34;
+    Envoie un message à tous les clients, excepté le n°(number)
+
+    exemple : je veux print partout &#34;message_content&#34; --&gt; server.send_everyone_except(numberfrom+&#34;&amp;&amp;&#34;+pattern+&#34;&amp;&amp;&#34;+message_content)
+    numberfrom est un string qui identifie l&#39;envoyeur (peut être &#34;abc123&#34; par exemple)
+    pattern est un string, motif à utiliser
+    message_content est un string, argument du motif
+
+
+    WARNING : si le symbole &#39;&amp;&#39; est utilisé pour autre chose, il y a des risques d&#39;erreur de syntaxe
+    :number : int (numéro du client à ne pas envoyer le message)
+    :message : string [format du message : numberfrom&amp;&amp;pattern&amp;&amp;message_content]
+    &#34;&#34;&#34;
+    message = message.replace(&#34;&amp;&amp;end|&#34;,&#34;&#34;)
+
+    if message == &#34;&#34;:
+        pass
+
+    elif &#34;|&#34; in message:
+        print(&#34;[PRINT] Erreur : il ne doit pas y avoir &#39;|&#39; dans votre message&#34;)
+
+    else:
+        for client,addr,n in self.clientlist:
+            if n!=number:
+                try:
+                    client.send((message+&#34;&amp;&amp;end|&#34;).encode())
+                except:
+                    print(&#34;[PRINT] Erreur d&#39;envoie avec&#34;,addr,n)</code></pre>
+</details>
+</dd>
+<dt id="mysocketmodule.Server.send_to"><code class="name flex">
+<span>def <span class="ident">send_to</span></span>(<span>self, number, message)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Envoie un message à un client en particulier</p>
+<p>exemple : je veux print partout "message_content" &ndash;&gt; server.send_to(number,numberfrom+"&amp;&amp;"+pattern+"&amp;&amp;"+message_content)
+numberfrom est un string qui identifie l'envoyeur (peut être "abc123" par exemple)
+pattern est un string, motif à utiliser
+message_content est un string, argument du motif</p>
+<p>WARNING : si le symbole '&amp;' est utilisé pour autre chose, il y a des risques d'erreur de syntaxe
+:number : int (numéro du client auquel on envoie le message)
+:message : string (contenu du message à envoyer)</p></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def send_to(self,number,message):
+    &#34;&#34;&#34;
+    Envoie un message à un client en particulier
+
+    exemple : je veux print partout &#34;message_content&#34; --&gt; server.send_to(number,numberfrom+&#34;&amp;&amp;&#34;+pattern+&#34;&amp;&amp;&#34;+message_content)
+    numberfrom est un string qui identifie l&#39;envoyeur (peut être &#34;abc123&#34; par exemple)
+    pattern est un string, motif à utiliser
+    message_content est un string, argument du motif
+
+    WARNING : si le symbole &#39;&amp;&#39; est utilisé pour autre chose, il y a des risques d&#39;erreur de syntaxe
+    :number : int (numéro du client auquel on envoie le message)
+    :message : string (contenu du message à envoyer)
+    &#34;&#34;&#34;
+    message = message.replace(&#34;&amp;&amp;end|&#34;,&#34;&#34;)
+
+    if message == &#34;&#34;:
+        pass
+    elif &#34;|&#34; in message:
+        print(&#34;[PRINT] Erreur : il ne doit pas y avoir &#39;|&#39; dans votre message&#34;)
+    else:
+        client,addr,n = self.clientlist[number]
+        try:
+            client.send((message+&#34;&amp;&amp;end|&#34;).encode())
+        except:
+            print(&#34;[PRINT] Erreur d&#39;envoie avec&#34;,addr,n)</code></pre>
+</details>
+</dd>
+<dt id="mysocketmodule.Server.treat_received_message"><code class="name flex">
+<span>def <span class="ident">treat_received_message</span></span>(<span>self, number, message)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Traite les messages reçus
+Déroulement :
+1) Détecte si plusieurs messages ont été reçus en même temps (un client a envoyé plusieurs msg d'un coup par exemple) avec la méthode check_for_multiple_messages
+2) Traite chacun de ces messages individuellement avec la méthode check_for_multiple_messages
+3)
+Message vide : Renvoie une liste vide
+Message non vide : Les motifs "TREATDATA" seront ajoutés à une liste dans un tupple (pattern,message_content)
+Les autres motifs seront traités par la fonction pattern_recognition()</p>
+<p>Les motifs sont entièrement modifiables !</p>
+<p>:number = int
+:message = string [format : numberfrom&amp;&amp;pattern&amp;&amp;message_content]</p></section>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def treat_received_message(self,number,message):
+    &#34;&#34;&#34;
+    Traite les messages reçus
+    Déroulement :
+    1) Détecte si plusieurs messages ont été reçus en même temps (un client a envoyé plusieurs msg d&#39;un coup par exemple) avec la méthode check_for_multiple_messages
+    2) Traite chacun de ces messages individuellement avec la méthode check_for_multiple_messages
+    3)  Message vide : Renvoie une liste vide
+        Message non vide : Les motifs &#34;TREATDATA&#34; seront ajoutés à une liste dans un tupple (pattern,message_content)
+                           Les autres motifs seront traités par la fonction pattern_recognition()
+
+    Les motifs sont entièrement modifiables !
+
+
+    :number = int
+    :message = string [format : numberfrom&amp;&amp;pattern&amp;&amp;message_content]
+    &#34;&#34;&#34;
+
+    if message == &#34;&#34;:
+        return([])
+    else:
+        return(self.check_for_multiple_messages(number,message))</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="mysocketmodule.Client" href="#mysocketmodule.Client">Client</a></code></h4>
+<ul class="">
+<li><code><a title="mysocketmodule.Client.check_for_multiple_messages" href="#mysocketmodule.Client.check_for_multiple_messages">check_for_multiple_messages</a></code></li>
+<li><code><a title="mysocketmodule.Client.close" href="#mysocketmodule.Client.close">close</a></code></li>
+<li><code><a title="mysocketmodule.Client.connect_to" href="#mysocketmodule.Client.connect_to">connect_to</a></code></li>
+<li><code><a title="mysocketmodule.Client.pattern_recognition" href="#mysocketmodule.Client.pattern_recognition">pattern_recognition</a></code></li>
+<li><code><a title="mysocketmodule.Client.receive" href="#mysocketmodule.Client.receive">receive</a></code></li>
+<li><code><a title="mysocketmodule.Client.send_all" href="#mysocketmodule.Client.send_all">send_all</a></code></li>
+<li><code><a title="mysocketmodule.Client.send_server" href="#mysocketmodule.Client.send_server">send_server</a></code></li>
+<li><code><a title="mysocketmodule.Client.treat_received_message" href="#mysocketmodule.Client.treat_received_message">treat_received_message</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="mysocketmodule.Server" href="#mysocketmodule.Server">Server</a></code></h4>
+<ul class="">
+<li><code><a title="mysocketmodule.Server.check_for_multiple_messages" href="#mysocketmodule.Server.check_for_multiple_messages">check_for_multiple_messages</a></code></li>
+<li><code><a title="mysocketmodule.Server.check_for_one_message" href="#mysocketmodule.Server.check_for_one_message">check_for_one_message</a></code></li>
+<li><code><a title="mysocketmodule.Server.client_has_closed" href="#mysocketmodule.Server.client_has_closed">client_has_closed</a></code></li>
+<li><code><a title="mysocketmodule.Server.close" href="#mysocketmodule.Server.close">close</a></code></li>
+<li><code><a title="mysocketmodule.Server.close_client" href="#mysocketmodule.Server.close_client">close_client</a></code></li>
+<li><code><a title="mysocketmodule.Server.listen" href="#mysocketmodule.Server.listen">listen</a></code></li>
+<li><code><a title="mysocketmodule.Server.pattern_recognition" href="#mysocketmodule.Server.pattern_recognition">pattern_recognition</a></code></li>
+<li><code><a title="mysocketmodule.Server.receive" href="#mysocketmodule.Server.receive">receive</a></code></li>
+<li><code><a title="mysocketmodule.Server.send_all" href="#mysocketmodule.Server.send_all">send_all</a></code></li>
+<li><code><a title="mysocketmodule.Server.send_everyone_except" href="#mysocketmodule.Server.send_everyone_except">send_everyone_except</a></code></li>
+<li><code><a title="mysocketmodule.Server.send_to" href="#mysocketmodule.Server.send_to">send_to</a></code></li>
+<li><code><a title="mysocketmodule.Server.treat_received_message" href="#mysocketmodule.Server.treat_received_message">treat_received_message</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.7.5</a>.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>
