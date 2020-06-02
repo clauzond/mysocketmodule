@@ -7,6 +7,7 @@ La documentation se trouve dans /html
 Des pistes à explorer :
 - https://pypi.org/project/Webhook-Listener/
 - https://www.geeksforgeeks.org/get-post-requests-using-python/
+- Threads
 
 Pour documentation :
 https://pdoc3.github.io/pdoc/
